@@ -1,0 +1,189 @@
+REPASO PARCIAL
+
+
+----------------------------------
+Java Beans->Convecion para trasladar proyectos
+
+Recordamos usos como de la clase Serializable 
+Serializar pasar a codigo en binario a todos los objetos,no empleamos la clase para una especificidad
+
+1-Todas las clases deben implementar el serializable 
+2-Ideal campos en private 
+3-Constructor vacio e implementacion de metodos de acceso y muestra
+
+-----------------------------------
+
+COMPOSICION
+Nos da una division por jerarquia y nos deja la delegacion de una forma mas especifica
+RELEER ARCHIVO HTML
+
+ALCANCE EN LOS NIVELES 
+ACLARAR CASO DEL ENUM
+Vienen como protected
+
+
+
+
+Clases ANIDADAS
+
+miembro->member->Campo
+anonima->anonymus->Implementacion de una interfaz
+interna->local->Claseinterna GENERADA DENTRO DE LA CLASE EXTERNA 
+
+
+
+
+
+---------------------------
+
+USO DE LOS GENERICOS
+CUALES SON LAS CONVECIONES 
+
+
+<T>Tipo    ->Clase generadas por nosotros /En peor caso para general 
+<E>Elementos -> Clase ya diseñadas
+<V> Valor 
+<K> Clave
+
+
+CUANDO USAMOS LOS GENERICOS
+Para hacer las aclaraciones correspondientes en las interfaces y de esta manera darle
+mas dinamismo al codigo y aumentar su cohesion 
+
+-----------------------
+COLLECTIONS Y COLLECTION
+
+Collection: Collection es una interfaz presente en java.util.package. 
+Se utiliza para representar un grupo de objetos individuales como una sola unidad.
+
+List->Concepto de pila EXCEPTO POR EL LINKEDLIST
+Map->Clave valor
+Set->Bolsa
+
+LIST->admite duplicados
+Set->no admite duplicados
+Map->En caso de repetir la llave prioriza a la ultima 
+
+
+SOLO EN EL CASO DE LOS LIST SI QUIERO PREDIFIRNLO EL TAMAÑO
+
+si quermeos definirlo con un numero
+List<Clase> nombre=new ArrayList<>(numero);
+
+
+Coleccitions: es una clase de utilidad presente en java.util.package.
+Define varios métodos de utilidad, como la clasificación y la búsqueda, que 
+se utilizan para operar en la recopilación. Tiene todos los métodos estáticos.
+Estos métodos brindan la comodidad que tanto necesitan los desarrolladores,
+permitiéndoles trabajar de manera efectiva
+
+ArrayList
+
+HashSet->NO esta ordenado
+HashMap DIFERENCIA EN EL PUT
+LinkedList->Concepto
+TreeSet->esta ordenado->Comparator clase compuesta 
+
+
+
+
+
+
+metodos
+sort()->Ordenar
+toArray()->Convierte en un array con objetos del tipo Object[]
+clone()->clona la lista 
+
+
+
+--------------------------------
+Interfaces empleadas
+
+Comparator ->Ordenamos de manera alfabetica se crea un Comparator es mas dinamica 
+
+Comparable-> numerica ->Se implementa en la clase
+
+Comparator da mas versatilidad porque no es necesario que lo empliemos en la clase que tenemos
+
+
+
+--------------------------------
+
+Iterator() ListIterator()
+Nos permite trabajar con las colecciones de manera dinamica 
+recorriendo los elementos guiandonos por un indice
+
+metodos
+hasNext()->true o false dependiendo de sigueinte elemento
+next()->carga en la vairable que querramos el siguiente valor o simplemente mueve el puntero
+remove()->quitar
+
+DIFERENCIA 
+ListIterator cuenta con la posibilidad de agregar elementos a un linkedList a dif 
+del iterator
+metodo 
+add()->agregar
+
+
+
+--------------------------------
+Lambdas
+
+Son funciones anonimas que se generan para simplificar el codigo, ahorrar recursos y 
+dar mas dinamismo a la funcion 
+
+
+
+-------------------------------
+
+EXPRESIONES REGULARES
+
+Conjunto de formulas especificas para la busqueda por caracteres
+Sirve para hacer las validaciones que querramos
+de patrones especificos
+
+Coincidencias Basicas
+.       - Cualquier Caracter, excepto nueva linea
+letra   - Cualquier ubicacion de esa letra 
+\d      - Cualquier Digitos (0-9)
+\D      - No es un Digito (0-9)
+\w      - Caracter de Palabra (a-z, A-Z, 0-9, _)
+\W      - No es un Caracter de Palabra.
+\s      - Espacios de cualquier tipo. (espacio, tab, nueva linea)
+\S      - No es un Espacio, Tab o nueva linea.
+
+Limites
+\b      - Limite de Palabra
+\B      - No es un Limite de Palabra
+^       - Inicio de una cadena de texto
+$       - Final de una cadena de texto
+
+Cuantificadores:
+*       - 0 o Más
++       - 1 o Más
+?       - 0 o Uno
+{3}     - Numero Exacto
+{3,4}   - Rango de Numeros (Minimo, Maximo)
+
+Conjuntos de Caracteres
+[]      - Caracteres dentro de los brackets
+[^ ]    - Caracteres que NO ESTAN dentro de los brackets
+
+Grupos
+( )     - Grupo
+|       - Uno u otro
+
+-----------------------------
+
+[] Nostros anotamos el valor valores o continuadad que querramos buscar
+[^] NO QUEREMOS
++ Concatenacion espcifica debe estar si o si 
+^ Inicio del texto
+$ Final del texto
+{n} cantidad n de repeticiones de un valor 
+?   puede o no estar y solo se permite una vez
+*   puede o no estar pero no solo debe estar una vez
+
+
+
+
